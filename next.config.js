@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: false,
+  },
+  i18n: {
+    locales: ['vi', 'en'],
+    defaultLocale: 'en',
   },
 }
 
