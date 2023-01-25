@@ -10,7 +10,7 @@ const vi = {
     specialist: "Kỹ sư phần mềm",
     short_description:
       "Tôi là một kỹ sư phần mềm với một niềm đam mê mảnh liệt với các dòng code. Tuy đam mê là vậy nhưng khó khăn cũng chồng chất, nhất là trong quá trình tự học. Do đó blog này ra đời là để note lại những khó khăn mình gặp phải cũng như là để chia sẻ những kinh nghiệm, trải nghiệm và kiến thức mà mình học được cho mọi người cùng... khó khăn chung với mình. :)",
-    bỉthdate: "01-05-2000",
+    birthDate: "01-05-2000",
     profile: "Thông tin",
   },
   blog: {

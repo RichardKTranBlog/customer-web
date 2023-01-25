@@ -10,7 +10,7 @@ const en = {
     specialist: "Software Engineering",
     short_description:
       "I'm a software engineer with strongly passionate about lines of code. Despite this, difficulties piling up difficulties, particularly in the self-taught process. As a result, this blog is born with the mission of documenting my difficulties and sharing my experience, knowledge, and lessons learned with others who face similar difficulties.",
-    bỉthdate: "01 May, 2000",
+    birthDate: "01 May, 2000",
     profile: "Profile",
   },
   blog: {
