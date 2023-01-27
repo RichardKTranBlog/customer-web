@@ -1,17 +1,17 @@
-import React from "react";
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
-import CardName from "./CardName";
-import ProfileDetail from "./ProfileDetail";
-import Social from "./Social";
-import { CloseIcon } from "@chakra-ui/icons";
-import useTrans from "@/hooks/useTrans";
+import React from 'react';
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
+import CardName from './CardName';
+import ProfileDetail from './ProfileDetail';
+import Social from './Social';
+import { CloseIcon } from '@chakra-ui/icons';
+import useTrans from '@/hooks/useTrans';
 
 export default function ProfileSection({
   closeInfo,
 }: {
   closeInfo: () => void;
 }) {
-  const bg = useColorModeValue("light_card_bg", "dark_card_bg");
+  const bg = useColorModeValue('light_card_bg', 'dark_card_bg');
   const trans = useTrans();
 
   return (
@@ -20,26 +20,24 @@ export default function ProfileSection({
       top={0}
       justifyContent="space-between"
       flexDir="column"
-      w={{ base: "100%", sm: "70%", md: "50%", lg: "25%", xl: "25%" }}
+      w={{ base: '100%', sm: '70%', md: '50%', lg: '25%', xl: '25%' }}
       bg={bg}
       minHeight="100%"
       display="flex"
-      zIndex={0}
-    >
+      zIndex={0}>
       <Flex
         pos="absolute"
         right="1rem"
         top="1rem"
-        _hover={{ cursor: "pointer" }}
+        _hover={{ cursor: 'pointer' }}
         onClick={() => closeInfo()}
         display={{
-          base: "flex",
-          sm: "flex",
-          md: "flex",
-          lg: "none",
-          xl: "none",
-        }}
-      >
+          base: 'flex',
+          sm: 'flex',
+          md: 'flex',
+          lg: 'none',
+          xl: 'none',
+        }}>
         <CloseIcon />
       </Flex>
       <Flex
@@ -47,8 +45,7 @@ export default function ProfileSection({
         direction="column"
         pt={{ base: 5, lg: 5, xl: 8 }}
         textAlign="center"
-        align="center"
-      >
+        align="center">
         <CardName
           avatar="/images/avatar.jpg"
           name={trans.profile.name}

@@ -1,9 +1,9 @@
-import { ExternalFonts } from "@/assets/fonts";
-import { Layout } from "@/layouts/Layout";
-import { theme } from "@/themes";
-import { ChakraProvider } from "@chakra-ui/react";
-import { AnimatePresence } from "framer-motion";
-import { AppProps } from "next/app";
+import { ExternalFonts } from '@/assets/fonts';
+import { Layout } from '@/layouts/Layout';
+import { theme } from '@/themes';
+import { ChakraProvider } from '@chakra-ui/react';
+import { AnimatePresence } from 'framer-motion';
+import { AppProps } from 'next/app';
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
