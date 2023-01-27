@@ -1,7 +1,7 @@
-import React from "react";
-import { Image, Flex, Heading, Text } from "@chakra-ui/react";
-import useTrans from "../../hooks/useTrans";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Image, Flex, Heading, Text } from '@chakra-ui/react';
+import useTrans from '@/hooks/useTrans';
+import { motion } from 'framer-motion';
 
 export type CertificateCardProps = {
   bgColor: string;
@@ -20,14 +20,14 @@ const listEffect = {
   visible: {
     opacity: 1,
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.2,
     },
   },
   hidden: {
     opacity: 0,
     transition: {
-      when: "afterChildren",
+      when: 'afterChildren',
     },
   },
 };
@@ -50,22 +50,21 @@ export const CertificateCard = ({
   const trans = useTrans();
   return (
     <MotionFlex
-      direction={{ base: "column", md: imgRight ? "row-reverse" : "row" }}
+      direction={{ base: 'column', md: imgRight ? 'row-reverse' : 'row' }}
       alignItems="center"
-      w={{ base: "95%", md: "95%", lg: "90%", xl: "85%" }}
+      w={{ base: '95%', md: '95%', lg: '90%', xl: '85%' }}
       my={7}
       variants={listEffect}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      {...props}
-    >
+      {...props}>
       <MotionImage
         variants={itemEffect}
         whileHover={{ scale: 1.2 }}
         src={img}
         borderRadius="16px"
-        w={{ base: "90%", md: "50%", lg: "45%", xl: "40%" }}
+        w={{ base: '90%', md: '50%', lg: '45%', xl: '40%' }}
         objectFit="fill "
         alt="QF formula"
       />
@@ -76,38 +75,35 @@ export const CertificateCard = ({
         align="flex-start"
         bgColor={bgColor}
         borderRadius={{
-          base: "10px",
-          md: imgRight ? "20px 0 0 20px" : "0 20px 20px 0",
+          base: '10px',
+          md: imgRight ? '20px 0 0 20px' : '0 20px 20px 0',
         }}
-        my={{ base: "10px", md: "0" }}
+        my={{ base: '10px', md: '0' }}
         px={7}
         py={5}
-      >
+        zIndex={-1000}>
         <Heading
           as="h4"
-          fontSize={{ base: "lg", md: "lg", lg: "xl", xl: "xl" }}
+          fontSize={{ base: 'lg', md: 'lg', lg: 'xl', xl: 'xl' }}
           alignSelf="left"
           mb={2}
-          color={nameColor}
-        >
+          color={nameColor}>
           {name}
         </Heading>
         <Text
-          fontSize={{ base: "xs", lg: "xs", xl: "sm" }}
+          fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
           py={1}
-          lineHeight={{ base: "base", lg: "tall", xl: "tall" }}
+          lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
           textAlign="left"
-          color={subColor}
-        >
+          color={subColor}>
           {company}
         </Text>
         <Text
-          fontSize={{ base: "xs", lg: "xs", xl: "sm" }}
+          fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
           py={1}
-          lineHeight={{ base: "base", lg: "tall", xl: "tall" }}
+          lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
           textAlign="left"
-          color={subColor}
-        >
+          color={subColor}>
           {dateOfIssue}
         </Text>
       </MotionFlex>
