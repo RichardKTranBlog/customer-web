@@ -5,12 +5,12 @@ import {
   Avatar,
   Text,
   useColorModeValue,
-} from "@chakra-ui/react";
-import Head from "next/head";
-import React, { useState } from "react";
-import { useMediaQuery } from "@chakra-ui/react";
-import { Navbar } from "@/layouts/Navbar";
-import ProfileSection from "@/components/info/ProfileSection/ProfileSection";
+} from '@chakra-ui/react';
+import Head from 'next/head';
+import React, { useState } from 'react';
+import { useMediaQuery } from '@chakra-ui/react';
+import { Navbar } from '@/layouts/Navbar';
+import ProfileSection from '@/components/info/ProfileSection/ProfileSection';
 
 export const Layout = ({
   children,
@@ -20,7 +20,7 @@ export const Layout = ({
   router: any;
 }) => {
   const [isShowInfo, setShowInfo] = useState(false);
-  const [isLargerThan960] = useMediaQuery("(min-width: 960px)");
+  const [isLargerThan960] = useMediaQuery('(min-width: 960px)');
 
   const handleShowInfo = () => {
     setShowInfo(!isShowInfo);
@@ -46,13 +46,12 @@ export const Layout = ({
       </Head>
 
       <Flex
-        pl={{ base: "0", md: "0", lg: "25%", xl: "25%" }}
+        pl={{ base: '0', md: '0', lg: '25%', xl: '25%' }}
         pt="6rem"
         w="100%"
         minH="100vh"
-        bg={useColorModeValue("light_bg", "dark_bg")}
-        direction="column"
-      >
+        bg={useColorModeValue('light_bg', 'dark_bg')}
+        direction="column">
         {children}
       </Flex>
       <Navbar path={router.asPath} toggleShowInfo={handleShowInfo} />
@@ -67,11 +66,11 @@ export const Layout = ({
             top={0}
             left={0}
             display={{
-              base: "block",
-              sm: "block",
-              md: "block",
-              lg: "none",
-              xl: "none",
+              base: 'block',
+              sm: 'block',
+              md: 'block',
+              lg: 'none',
+              xl: 'none',
             }}
             w="100%"
             h="100vh"
