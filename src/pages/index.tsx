@@ -1,6 +1,7 @@
-import { Flex } from "@chakra-ui/react";
-import Head from "next/head";
-import { motion } from "framer-motion";
+import { Flex } from '@chakra-ui/react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { BlogItem } from '@/components/blog';
 
 const MotionFlex = motion(Flex);
 
@@ -8,14 +9,14 @@ const listEffect = {
   visible: {
     opacity: 1,
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.2,
     },
   },
   hidden: {
     opacity: 0,
     transition: {
-      when: "afterChildren",
+      when: 'afterChildren',
     },
   },
 };
@@ -30,7 +31,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 },
 };
 
-export default function Home() {
+const HomePage = () => {
   return (
     <>
       <Head>
@@ -41,18 +42,23 @@ export default function Home() {
         animate="enter"
         exit="exit"
         variants={variants}
-        transition={{ duration: 0.4, type: "easeInOut" }}
-        style={{ position: "relative" }}
-      >
+        transition={{ duration: 0.4, type: 'easeInOut' }}
+        style={{ position: 'relative' }}>
         <MotionFlex
           initial="hidden"
           animate="visible"
           variants={listEffect}
           direction="column"
           alignItems="center"
-          pb={10}
-        ></MotionFlex>
+          pb={10}>
+          <BlogItem href="posts/1" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
+        </MotionFlex>
       </motion.div>
     </>
   );
-}
+};
+
+export default HomePage;
