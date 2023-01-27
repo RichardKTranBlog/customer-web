@@ -39,19 +39,19 @@ export const BlogItem = ({ href, ...props }: BlogItemProps) => {
       my={3}
       {...props}>
       <HStack className="tag" spacing={5}>
-        <Link href={href} as="a">
+        <Link href={href}>
           <Text as="span" color={tagColor} fontSize="sm" fontWeight="bold">
             SELF-HELP
           </Text>
         </Link>
 
-        <Link href={href} as="a">
+        <Link href={href}>
           <Text as="span" color={tagColor} fontSize="sm" fontWeight="bold">
             MOTIVATION
           </Text>
         </Link>
       </HStack>
-      <Link href={href} as="a">
+      <Link href={href}>
         <Heading
           my={{ base: '1', lg: '2', xl: '3' }}
           color={textColor}
@@ -78,7 +78,7 @@ export const BlogItem = ({ href, ...props }: BlogItemProps) => {
         <Text color={subTextColor} fontSize="sm">
           5 April, 2021
         </Text>
-        <Link href={href} as="a">
+        <Link href={href}>
           <Flex align="center">
             <Text color={tagColor} mr={3} fontSize="sm" fontWeight="bold">
               {trans.blog.read_more}{' '}
