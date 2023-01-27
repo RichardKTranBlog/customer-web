@@ -12,17 +12,17 @@ import {
   Avatar,
   Image,
   HStack,
-} from "@chakra-ui/react";
-import React from "react";
-import NextLink from "next/link";
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { IoMdUndo } from "react-icons/io";
-import useTrans from "@/hooks/useTrans";
-import { useRouter } from "next/router";
-import { useCookies } from "react-cookie";
-import { motion } from "framer-motion";
-import ToggleColorMode from "@/components/common/ToggleColorMode";
+} from '@chakra-ui/react';
+import React from 'react';
+import NextLink from 'next/link';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { HamburgerIcon } from '@chakra-ui/icons';
+import { IoMdUndo } from 'react-icons/io';
+import useTrans from '@/hooks/useTrans';
+import { useRouter } from 'next/router';
+import { useCookies } from 'react-cookie';
+import { motion } from 'framer-motion';
+import ToggleColorMode from '@/components/common/ToggleColorMode';
 
 const MotionButton = motion(Button);
 
@@ -33,7 +33,7 @@ export const Navbar = ({
   path: string;
   toggleShowInfo: () => void;
 }) => {
-  const [cookie, setCookie] = useCookies(["NEXT_LOCALE"]);
+  const [cookie, setCookie] = useCookies(['NEXT_LOCALE']);
   const trans = useTrans();
   const router = useRouter();
 
@@ -46,7 +46,7 @@ export const Navbar = ({
   const changeLang = (lang: string) => {
     router.push(path, path, { locale: lang });
     if (cookie.NEXT_LOCALE !== lang) {
-      setCookie("NEXT_LOCALE", lang, { path: "/" });
+      setCookie('NEXT_LOCALE', lang, { path: '/' });
     }
   };
 
@@ -60,27 +60,24 @@ export const Navbar = ({
         pt="1rem"
         width="100%"
         height="5rem"
-        css={{ backdropFilter: "blur(10px)" }}
-        zIndex={0}
-      >
+        css={{ backdropFilter: 'blur(10px)' }}
+        zIndex={0}>
         <Flex
           pos="fixed"
           left="1rem"
           align="center"
-          pl={{ base: "1rem", lg: "3rem" }}
+          pl={{ base: '1rem', lg: '3rem' }}
           display={{
-            base: "flex",
-            sm: "flex",
-            md: "flex",
-            lg: "none",
-            xl: "none",
-          }}
-        >
+            base: 'flex',
+            sm: 'flex',
+            md: 'flex',
+            lg: 'none',
+            xl: 'none',
+          }}>
           <Heading
             mr={5}
             onClick={() => setShowInfo()}
-            _hover={{ cursor: "pointer" }}
-          >
+            _hover={{ cursor: 'pointer' }}>
             <Avatar size="lg" name="Logo" src="/images/avatar.jpg" />
           </Heading>
           <Box>
@@ -93,9 +90,8 @@ export const Navbar = ({
           pos="fixed"
           right="1rem"
           align="center"
-          pr={{ base: "1rem", lg: "3rem" }}
-        >
-          <Flex display={{ base: "none", lg: "flex" }} mr={5}>
+          pr={{ base: '1rem', lg: '3rem' }}>
+          <Flex display={{ base: 'none', lg: 'flex' }} mr={5}>
             <LinkItem href="/" path={path}>
               {trans.navbar.my_blog}
             </LinkItem>
@@ -110,27 +106,26 @@ export const Navbar = ({
 
           <Flex
             display={{
-              base: "none",
-              sm: "none",
-              md: "none",
-              lg: "flex",
-              xl: "flex",
+              base: 'none',
+              sm: 'none',
+              md: 'none',
+              lg: 'flex',
+              xl: 'flex',
             }}
-            mx={3}
-          >
+            mx={3}>
             <Menu>
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                {locale == "vi" ? "VI" : "EN"}
+                {locale == 'vi' ? 'VI' : 'EN'}
               </MenuButton>
               <MenuList>
-                <MenuItem onClick={() => changeLang("vi")}>Tiếng Việt</MenuItem>
-                <MenuItem onClick={() => changeLang("en")}>English</MenuItem>
+                <MenuItem onClick={() => changeLang('vi')}>Tiếng Việt</MenuItem>
+                <MenuItem onClick={() => changeLang('en')}>English</MenuItem>
               </MenuList>
             </Menu>
           </Flex>
 
           {/* Responsive */}
-          <Flex display={{ base: "flex", lg: "none" }} zIndex={1000}>
+          <Flex display={{ base: 'flex', lg: 'none' }} zIndex={1000}>
             <Menu>
               <MenuButton
                 as={IconButton}
@@ -151,10 +146,10 @@ export const Navbar = ({
                   <MenuItem>{trans.navbar.about_me}</MenuItem>
                 </NextLink>
                 <HStack spacing={5} mt={2} ml={5}>
-                  <Box boxSize="50px" onClick={() => changeLang("vi")}>
+                  <Box boxSize="50px" onClick={() => changeLang('vi')}>
                     <Image src="/images/vn_flag.svg" alt="Viet Nam" />
                   </Box>
-                  <Box boxSize="50px" onClick={() => changeLang("en")}>
+                  <Box boxSize="50px" onClick={() => changeLang('en')}>
                     <Image src="/images/en_flag.svg" alt="English" />
                   </Box>
                 </HStack>
@@ -182,7 +177,7 @@ const LinkItem = ({
       <MotionButton
         whileTap={{ scale: 0.7 }}
         _focus={{
-          outline: "none",
+          outline: 'none',
         }}
         _hover={{
           backgroundColor: undefined,
@@ -190,10 +185,9 @@ const LinkItem = ({
         variant="ghost"
         aria-label={children}
         w="100%"
-        bgColor={active ? "#22B07D" : undefined}
-        color={active ? "#FFFFFF" : undefined}
-        ml={2}
-      >
+        bgColor={active ? '#22B07D' : undefined}
+        color={active ? '#FFFFFF' : undefined}
+        ml={2}>
         <Heading fontSize="md" fontWeight="bold">
           {children}
         </Heading>
