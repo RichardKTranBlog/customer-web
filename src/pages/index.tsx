@@ -31,7 +31,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 },
 };
 
-export default function Home() {
+const HomePage = () => {
   return (
     <>
       <Head>
@@ -59,4 +59,6 @@ export default function Home() {
       </motion.div>
     </>
   );
-}
+};
+
+export default HomePage;

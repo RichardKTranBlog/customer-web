@@ -18,7 +18,7 @@ const variants = {
   enter: { opacity: 1, x: 0, y: 0 },
   exit: { opacity: 0, x: -0, y: 20 },
 };
-export default function About() {
+const AboutPage = () => {
   return (
     <>
       <Head>
@@ -51,4 +51,6 @@ export default function About() {
       </MotionFlex>
     </>
   );
-}
+};
+
+export default AboutPage;
