@@ -1,15 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Build images and push to Registry
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+docker build -t richardktran/blog-frontend:<environment>-<version> .
+docker tag blog-frontend:<environment>-<version> blog-frontend:<environment>-<version>
+docker push blog-frontend:<environment>-<version>
+```
+
+Example:
+
+```bash
+docker build -t richardktran/blog-frontend:dev-0.0.1 .
+docker tag blog-frontend:dev-0.0.1 blog-frontend:dev-0.0.1
+docker push blog-frontend:dev-0.0.1
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
