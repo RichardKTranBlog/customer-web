@@ -76,7 +76,7 @@ export const BlogItem = ({ href, ...props }: BlogItemProps) => {
       </Text>
       <Flex justify="space-between">
         <Text color={subTextColor} fontSize="sm">
-          7 April, 2023
+          8 April, 2023
         </Text>
         <Link href={href}>
           <Flex align="center">
