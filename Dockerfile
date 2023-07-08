@@ -1,8 +1,8 @@
 # Base image
 FROM node:lts-alpine3.18
 
-RUN mkdir -p /var/www/blog-fe
-WORKDIR /var/www/blog-fe
+RUN mkdir -p /var/www/customer-web
+WORKDIR /var/www/customer-web
 COPY . ./
 
 RUN npm install
