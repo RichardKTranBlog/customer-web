@@ -1,5 +1,5 @@
 # Base image
-FROM node:lts-alpine3.18
+FROM node:lts
 
 RUN mkdir -p /var/www/customer-web
 WORKDIR /var/www/customer-web
